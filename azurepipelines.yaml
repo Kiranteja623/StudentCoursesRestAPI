@@ -1,0 +1,11 @@
+pool: Default
+trigger: 
+  - master
+steps:
+  - task: Docker@2
+    inputs:  
+      containerRegistry: azure to docker
+      command: 'buildAndPush'
+      Dockerfile: 'StudentCoursesRestAPI/Dockerfile'
+      tags: '5.0-$(Build.BuildId)'
+  - script: echo $(Build.BuildId)
