@@ -6,6 +6,6 @@ steps:
     inputs:  
       containerRegistry: azure to docker
       command: 'buildAndPush'
-      Dockerfile: 'StudentCoursesRestAPI/Dockerfile'
+      Dockerfile: '**/Dockerfile'
       tags: '5.0-$(Build.BuildId)'
   - script: echo $(Build.BuildId)
