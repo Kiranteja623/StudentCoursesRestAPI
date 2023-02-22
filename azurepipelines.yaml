@@ -4,7 +4,7 @@ trigger:
 steps:
   - task: Docker@2
     inputs:  
-      containerRegistry: azure to docker
+      containerRegistry: Docker Registry
       command: 'buildAndPush'
       Dockerfile: '**/Dockerfile'
       tags: '5.0-$(Build.BuildId)'
